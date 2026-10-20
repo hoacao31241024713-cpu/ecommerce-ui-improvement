@@ -80,13 +80,10 @@ Giải thích cách chạy trang web và những phần tôi cần kiểm tra.
  **Sinh viên tự hoàn thiện sau khi chạy thử.** Chưa có kết quả kiểm thử hoặc chỉnh sửa thực tế được xác nhận trong cuộc trò chuyện.
 
 - **Trình duyệt và thiết bị/kích thước đã kiểm tra:** Google chrome, máy tính và điện thoại di động
-- **Đã kiểm tra các lựa chọn tài khoản/thông tin khác và Email/Điện thoại/Zalo:** [Chưa bổ sung]
-- **Kết quả hiển thị trên máy tính và điện thoại:** [Chưa bổ sung]
-- **Vấn đề tự phát hiện:** [Chưa bổ sung]
-- **Ít nhất một điểm tự chỉnh sửa, lý do và file/dòng liên quan:** [Chưa bổ sung]
-- **Đề xuất AI không sử dụng hoặc đã thay đổi (nếu có):** [Chưa bổ sung]
-- **Ảnh minh chứng / commit GitHub (nếu có):** [Chưa bổ sung]
-
+- **Đã kiểm tra các lựa chọn tài khoản/thông tin khác và Email/Điện thoại/Zalo:** tốt
+- **Kết quả hiển thị trên máy tính và điện thoại:** tốt
+- **Vấn đề tự phát hiện:** các ô chọn vùng phương thức thanh toán hơi nhỏ
+- **Ít nhất một điểm tự chỉnh sửa, lý do và file/dòng liên quan:** bổ sung code 
 ## 6. Phần tôi hiểu và có thể giải thích
 
 Các nội dung dưới đây là **gợi ý để tự ôn tập và xác nhận**, chưa phải tuyên bố rằng sinh viên đã hiểu hoặc giải thích được toàn bộ:
