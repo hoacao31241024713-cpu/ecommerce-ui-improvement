@@ -11,38 +11,63 @@ Sử dụng AI để phân tích website tham khảo **Thế Giới In Ấn** (h
 
 ## 3. Prompt đã sử dụng
 
-Dưới đây là **trích đoạn nguyên văn** các prompt chính đã gửi ChatGPT; phần lược bớt được ký hiệu `[...]`. Toàn văn prompt được lưu trong lịch sử cuộc trò chuyện để đối chiếu.
-
 **Prompt 1 – Phân tích website:**
 
-> Bạn là chuyên gia phân tích nghiệp vụ và thiết kế trải nghiệm người dùng cho website thương mại điện tử.
->
-> Tôi đang khảo sát website: thegioiinan.com (https://thegioiinan.com/).
->
-> Hãy giúp tôi lập bảng phân tích các khu vực: [...] 6.Yêu cầu báo giá
->
-> [...] Không khẳng định những tính năng chưa được kiểm chứng. Phân biệt rõ nhận xét dựa trên quan sát và đề xuất của AI.
+Bạn là chuyên gia phân tích nghiệp vụ và thiết kế trải nghiệm người dùng
+cho website thương mại điện tử.
+Tôi đang khảo sát website:  thegioiinan.com (https://thegioiinan.com/).  
+Hãy giúp tôi lập bảng phân tích các khu vực:
+1. Trang chủ.
+2. Danh mục sản phẩm.
+3. Chi tiết sản phẩm.
+4. Tìm kiếm.
+5. Giỏ hàng.
+6.Yêu cầu báo giá
+Với mỗi khu vực, hãy nêu:
+- Mục đích của chức năng.
+- Thành phần giao diện cần có.
+- Điểm thuận tiện đối với khách hàng.
+- Một vấn đề có thể phát sinh.
+- Một đề xuất cải tiến.
+Không khẳng định những tính năng chưa được kiểm chứng.
+Phân biệt rõ nhận xét dựa trên quan sát và đề xuất của AI.
 
 **Prompt 2 – Đề xuất phương án thiết kế:**
+Tôi đang thực hiện bài tập phát triển giao diện website thương mại điện tử
+bằng HTML5 và CSS3.
 
-> Bạn là chuyên gia thiết kế giao diện (UI) và trải nghiệm người dùng (UX) cho website thương mại điện tử, có kinh nghiệm thiết kế biểu mẫu yêu cầu báo giá trực tuyến.
->
-> [...] Tôi muốn thiết kế lại khu vực Yêu cầu báo giá bằng cách bổ sung mục **“Phương thức liên hệ nhận báo giá”**, giúp khách hàng linh hoạt lựa chọn kênh tiếp nhận báo giá và cung cấp thông tin liên hệ tương ứng.
->
-> [...] **Trước tiên, chỉ hãy giải thích và đề xuất phương án thiết kế. Chưa tạo toàn bộ mã nguồn HTML/CSS cho đến khi tôi yêu cầu.**
+Tôi muốn cải tiến khu vực: Theo ghi nhận khảo sát ban đầu của tôi, khu vực Yêu cầu báo giá hiện tại sử dụng thông tin liên hệ lấy từ tài khoản đăng nhập của khách hàng, chưa cung cấp lựa chọn để khách hàng chủ động nhập thông tin liên hệ khác hoặc lựa chọn kênh nhận báo giá mong muốn.
+Điều này có thể gây bất tiện khi khách hàng muốn nhận báo giá qua một số điện thoại, địa chỉ email hoặc tài khoản liên hệ khác với thông tin đã đăng ký..
+
+Đối tượng sử dụng: khách hàng mua sắm trực tuyến tại Việt Nam.
+
+Hãy đề xuất:
+1. Bố cục giao diện.
+2. Các thành phần HTML cần sử dụng.
+3. Cách tổ chức CSS.
+4. Cách hiển thị trên máy tính và điện thoại.
+5. Những điểm cần kiểm tra về khả năng sử dụng.
+
+Trước tiên, hãy giải thích phương án thiết kế.
+Chưa tạo toàn bộ mã nguồn cho đến khi tôi yêu cầu.
 
 **Prompt 3 – Tạo mã nguồn:**
+Dựa trên phương án đã thống nhất, hãy tạo một trang giao diện **Yêu cầu báo giá** cho website Thế Giới In Ấn (https://thegioiinan.com/) bằng HTML5 và CSS3.
 
-> Dựa trên phương án thiết kế đã thống nhất ở Bước 2, hãy tạo một trang giao diện **Yêu cầu báo giá** cho website thương mại điện tử Thế Giới In Ấn (https://thegioiinan.com/) bằng HTML5 và CSS3.
->
-> [...] **Hãy cung cấp:**
-> 1. Mã nguồn hoàn chỉnh cho `index.html` và `style.css`.
-> 2. Hướng dẫn cách chạy trang web.
-> 3. Giải thích ngắn gọn các thành phần HTML/CSS quan trọng.
-> 4. Những điểm tôi cần tự kiểm tra và điều chỉnh sau khi chạy thử.
->
-> Chỉ tập trung vào giao diện cải tiến, không xây dựng lại toàn bộ website.
+Yêu cầu:
+- Giao diện có tiêu đề, thông tin sản phẩm in ấn mẫu và khu vực yêu cầu báo giá.
+- Bổ sung mục **“Phương thức liên hệ nhận báo giá”**.
+- Cho phép lựa chọn sử dụng thông tin tài khoản giả lập hoặc nhập thông tin liên hệ khác.
+- Có 3 phương thức nhận báo giá: Email, Điện thoại và Zalo.
+- Hiển thị trường nhập thông tin phù hợp với phương thức liên hệ được chọn.
+- Có nút gửi yêu cầu báo giá (chỉ mô phỏng giao diện, không gửi dữ liệu thực tế).
+- Bố cục phù hợp với màn hình máy tính và điện thoại.
+- Mã HTML có cấu trúc rõ ràng.
+- CSS được tách thành file riêng.
+- Không sử dụng backend hoặc cơ sở dữ liệu.
+- Không đưa thư viện hoặc thành phần không cần thiết vào dự án.
 
+Giải thích cách chạy trang web và những phần tôi cần kiểm tra.
 ## 4. Kết quả AI đề xuất
 
 - **Phân tích:** Nhận diện các khu vực trên website và đề xuất cải tiến biểu mẫu báo giá; phân biệt nhận xét từ khảo sát với giả thuyết/đề xuất của AI.
@@ -52,9 +77,9 @@ Dưới đây là **trích đoạn nguyên văn** các prompt chính đã gửi 
 
 ## 5. Kiểm tra và điều chỉnh
 
-> **Sinh viên tự hoàn thiện sau khi chạy thử.** Chưa có kết quả kiểm thử hoặc chỉnh sửa thực tế được xác nhận trong cuộc trò chuyện.
+ **Sinh viên tự hoàn thiện sau khi chạy thử.** Chưa có kết quả kiểm thử hoặc chỉnh sửa thực tế được xác nhận trong cuộc trò chuyện.
 
-- **Trình duyệt và thiết bị/kích thước đã kiểm tra:** [Chưa bổ sung]
+- **Trình duyệt và thiết bị/kích thước đã kiểm tra:** Google chrome, máy tính và điện thoại di động
 - **Đã kiểm tra các lựa chọn tài khoản/thông tin khác và Email/Điện thoại/Zalo:** [Chưa bổ sung]
 - **Kết quả hiển thị trên máy tính và điện thoại:** [Chưa bổ sung]
 - **Vấn đề tự phát hiện:** [Chưa bổ sung]
