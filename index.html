@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bài tập mô phỏng cải tiến giao diện yêu cầu báo giá cho website in ấn bằng HTML5 và CSS3.">
+  <title>Yêu cầu báo giá | Bài tập cải tiến giao diện</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">IN</span><span>THẾ GIỚI IN ẤN <small>Giao diện minh họa · Bài tập cá nhân</small></span></div>
+      <span class="header-note">Yêu cầu báo giá</span>
+    </div>
+  </header>
+
+  <main class="shell page-layout">
+    <div class="intro">
+      <p class="eyebrow">DỊCH VỤ IN THEO YÊU CẦU</p>
+      <h1>Yêu cầu báo giá</h1>
+      <p>Kiểm tra thông tin ấn phẩm và lựa chọn cách bạn muốn nhận báo giá. Đây là giao diện thực hành HTML/CSS, không kết nối hệ thống thật.</p>
+    </div>
+
+    <div class="content-grid">
+      <section class="panel form-panel" aria-labelledby="form-title">
+        <div class="section-heading"><span class="step">01</span><div><h2 id="form-title">Thông tin yêu cầu</h2><p>Ấn phẩm mẫu dùng để minh họa bố cục.</p></div></div>
+        <div class="product-box">
+          <div class="product-image" aria-hidden="true"><span>DANH<br>THIẾP</span></div>
+          <div class="product-text"><strong>In danh thiếp tiêu chuẩn</strong><span>Chất liệu: Giấy Couche 300gsm (mẫu)</span><span>Kích thước: 90 × 54 mm (mẫu)</span><span>Số lượng: 500 chiếc (mẫu)</span></div>
+        </div>
+
+        <form class="quote-form" action="#" method="get" novalidate>
+          <fieldset class="contact-section">
+            <legend><span class="step">02</span> Phương thức liên hệ nhận báo giá</legend>
+            <p class="field-help">Bạn có thể dùng thông tin tài khoản mẫu hoặc cung cấp thông tin khác. Chọn một cách để nhận phản hồi.</p>
+
+            <div class="field-label">Nguồn thông tin liên hệ</div>
+            <div class="option-grid source-options">
+              <label class="option-card"><input type="radio" name="contact-source" id="source-account" value="account" checked><span><strong>Dùng thông tin tài khoản</strong><small>Không cần nhập lại nếu thông tin phù hợp</small></span></label>
+              <label class="option-card"><input type="radio" name="contact-source" id="source-other" value="other"><span><strong>Dùng thông tin liên hệ khác</strong><small>Chủ động cung cấp email hoặc số khác</small></span></label>
+            </div>
+
+            <div class="field-label channel-title">Kênh nhận báo giá ưu tiên</div>
+            <div class="channel-options">
+              <label class="channel-option"><input type="radio" name="contact-channel" id="channel-email" value="email" checked><span>Email</span></label>
+              <label class="channel-option"><input type="radio" name="contact-channel" id="channel-phone" value="phone"><span>Điện thoại</span></label>
+              <label class="channel-option"><input type="radio" name="contact-channel" id="channel-zalo" value="zalo"><span>Zalo</span></label>
+            </div>
+
+            <div class="contact-details">
+              <div class="account-details email-account">
+                <span class="field-label">Email tài khoản (dữ liệu mẫu)</span>
+                <div class="read-only-value">khachhang@example.com</div>
+                <p class="hint">Đây là địa chỉ giả lập, không được lấy từ tài khoản thật.</p>
+              </div>
+              <div class="account-details phone-account">
+                <span class="field-label">Số điện thoại tài khoản (dữ liệu mẫu)</span>
+                <div class="read-only-value">0900 000 000</div>
+                <p class="hint">Đây là số giả lập, không được lấy từ tài khoản thật.</p>
+              </div>
+              <div class="custom-details custom-email">
+                <label for="email-other" class="field-label">Email muốn nhận báo giá</label>
+                <input class="text-input" type="email" id="email-other" name="email-other" placeholder="tenban@example.com" autocomplete="off">
+                <p class="hint">Vui lòng nhập email đúng định dạng khi sử dụng lựa chọn này.</p>
+              </div>
+              <div class="custom-details custom-phone">
+                <label for="phone-other" class="field-label">Số điện thoại muốn nhận báo giá</label>
+                <input class="text-input" type="tel" id="phone-other" name="phone-other" inputmode="tel" placeholder="Ví dụ: 09xxxxxxxx" autocomplete="off">
+              </div>
+              <div class="custom-details custom-zalo">
+                <label for="zalo-number" class="field-label">Số điện thoại đăng ký Zalo</label>
+                <input class="text-input" type="tel" id="zalo-number" name="zalo-number" inputmode="tel" placeholder="Nhập số điện thoại Zalo" autocomplete="off">
+                <p class="hint">Không tự giả định số tài khoản cũng là số Zalo.</p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="privacy-note"><span aria-hidden="true">ⓘ</span><p>Hãy kiểm tra kênh liên hệ đã chọn và thông tin tương ứng trước khi gửi. Bản thực hành này <strong>không gửi hoặc lưu dữ liệu</strong>.</p></div>
+          <div class="form-actions"><button type="button" class="primary-button" aria-describedby="demo-notice">Gửi yêu cầu báo giá <span aria-hidden="true">→</span></button><p id="demo-notice" class="hint">Nút chỉ để minh họa giao diện; không có chức năng gửi trong bài HTML/CSS.</p></div>
+        </form>
+      </section>
+
+      <aside class="sidebar">
+        <section class="panel info-panel"><p class="eyebrow">LỢI ÍCH CẢI TIẾN</p><h2>Chủ động chọn cách liên hệ</h2><ul><li>Giữ thông tin tài khoản khi phù hợp.</li><li>Cho phép dùng email hoặc số khác.</li><li>Chọn Email, điện thoại hoặc Zalo làm kênh ưu tiên.</li></ul></section>
+        <section class="panel guide-panel"><h2>Cách sử dụng</h2><ol><li>Xem thông tin ấn phẩm mẫu.</li><li>Chọn nguồn thông tin liên hệ.</li><li>Chọn kênh nhận báo giá.</li><li>Kiểm tra thông tin đang hiển thị.</li></ol><p>Phiên bản thực tế sẽ cần xử lý bổ sung bằng JavaScript/backend.</p></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer shell">Bài tập cải tiến UI/UX · HTML5 & CSS3 · Không phải website chính thức của Thế Giới In Ấn.</footer>
+</body>
+</html>
