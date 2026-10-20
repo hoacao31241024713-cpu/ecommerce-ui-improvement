@@ -47,8 +47,7 @@ Không sử dụng JavaScript, backend hoặc cơ sở dữ liệu.
 
 - **Công cụ:** ChatGPT.
 - **AI đã hỗ trợ:** Phân tích khu vực Yêu cầu báo giá, đề xuất bố cục UI/UX, gợi ý các thành phần HTML/CSS và hỗ trợ tạo mã nguồn `index.html`, `style.css`.
-- **Phần người thực hiện tự kiểm tra:** [Bổ sung sau khi chạy thử thực tế].
-- **Phần người thực hiện tự điều chỉnh hoặc bổ sung:** [Ghi rõ thay đổi do bản thân thực hiện; chưa có thông tin xác nhận].
+- **Phần người thực hiện tự điều chỉnh hoặc bổ sung:** Ban đầu giao diện còn đen trắng, dạng biểu mãu, chưa có cấu trúc bộ nhận diện của website gốc. Điều chỉnh lại phần giao diện biểu mẫu tinh gọn hơn, và thêm các thành phần giống bộ nhận diện của website gốc
 
-Chi tiết việc sử dụng AI được ghi trong file [`AI_USAGE.md`](AI_USAGE.md) nếu file này được đưa vào cùng repository.
+Chi tiết việc sử dụng AI được ghi trong file [`AI_USAGE.md`](AI_USAGE.md)
 
