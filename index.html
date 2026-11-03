@@ -1,207 +1,167 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bài tập thực hành giao diện Yêu cầu báo giá dựa theo ảnh tham khảo Thế Giới In Ấn; bổ sung chọn thông tin liên hệ bằng HTML5/CSS3.">
-  <title>Yêu cầu báo giá | Thực hành cải tiến giao diện</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Bản demo giao diện trang chủ Thế Giới In Ấn: giữ bố cục gốc, nâng cấp khu vực Hero với bốn hướng đặt in.">
+  <title>Thế Giới In Ấn | Giao diện đề xuất</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
 <body>
-  <!-- Bản thực hành giao diện. Logo và hình minh họa được trích từ ảnh tham khảo do người học cung cấp. -->
-  <div class="utility-bar">
-    <div class="utility-inner">
-      <div class="utility-links">
-        <a href="#bao-gia">▤ &nbsp;Yêu cầu báo giá</a>
-        <a href="#huong-dan">◫ &nbsp;Cẩm nang in ấn</a>
-        <a href="#don-hang">♧ &nbsp;Kiểm tra đơn hàng</a>
-      </div>
-      <div class="utility-account"><span>◎ &nbsp;Tài khoản mẫu</span><span class="chevron">⌄</span><span class="flag-vn">★</span><span>VI</span></div>
-    </div>
-  </div>
+  <a class="skip-link" href="#main">Chuyển đến nội dung chính</a>
+  <div class="utility-bar"><div class="container utility-inner">
+    <div class="utility-links"><a href="#quote">▤ &nbsp;Yêu cầu báo giá</a><a href="#articles">▣ &nbsp;Cẩm nang in ấn</a><a href="#reorder">▧ &nbsp;Kiểm tra đơn hàng</a></div>
+    <div class="utility-account"><span>◎ &nbsp;cao hoa⌄</span><span>🇻🇳 &nbsp;VI⌄</span></div>
+  </div></div>
+  <header class="site-header"><div class="container masthead">
+    <a href="#top" class="brand" aria-label="Thế Giới In Ấn - Trang chủ"><img src="assets/logo-original.png" alt="Thế Giới In Ấn"></a>
+    <form class="search-box" id="search-form" role="search"><label class="sr-only" for="site-search">Tìm ấn phẩm</label><span aria-hidden="true">⌕</span><input id="site-search" type="search" placeholder="Bạn cần tìm ấn phẩm gì?" autocomplete="off"><button type="submit" aria-label="Tìm kiếm">Tìm</button></form>
+    <div class="header-benefits"><div class="benefit-chip"><b>⬡</b><span><strong>BẢO MẬT</strong><small>THÔNG TIN AN TOÀN</small></span></div><div class="benefit-chip"><b>↻</b><span><strong>5 NGÀY ĐỔI TRẢ</strong><small>ĐẢM BẢO 100% HÀI LÒNG</small></span></div><a class="basket" href="#products" aria-label="Giỏ hàng">🛒<sup>2</sup></a></div>
+  </div></header>
+  <nav class="main-nav" aria-label="Danh mục chính"><div class="container nav-list">
+    <a class="nav-new" href="#categories">ẤN PHẨM TẾT <small>Mới</small></a>
+    <a href="#categories">VĂN PHÒNG ⌄</a><a href="#categories">TIẾP THỊ ⌄</a><a href="#categories">BAO BÌ ⌄</a><a href="#categories">CÁ NHÂN ⌄</a><a href="#categories">QUÀ TẶNG ⌄</a><a href="#categories">SỰ KIỆN ⌄</a><a href="#categories">ẤN PHẨM KHÁC ⌄</a><a href="#products">IN NHANH ⌄</a>
+  </div></nav>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="site-logo" href="https://thegioiinan.com/" target="_blank" rel="noopener noreferrer" aria-label="Website tham khảo Thế Giới In Ấn">
-        <img src="assets/logo-tham-khao.png" alt="Thế Giới In Ấn" width="199" height="40">
-      </a>
-      <div class="search-wrap" role="search">
-        <label class="sr-only" for="site-search">Tìm ấn phẩm</label>
-        <span aria-hidden="true" class="search-icon">⌕</span>
-        <input id="site-search" type="search" placeholder="Bạn cần tìm ấn phẩm gì?" autocomplete="off">
-      </div>
-      <div class="header-assurances" aria-label="Thông tin giới thiệu">
-        <div class="assurance"><span class="assurance-icon">⬡</span><span><b>BẢO MẬT</b><small>THÔNG TIN AN TOÀN</small></span></div>
-        <div class="assurance"><span class="assurance-icon">◴</span><span><b>5 NGÀY ĐỔI TRẢ</b><small>ĐẢM BẢO 100% HÀI LÒNG</small></span></div>
-        <div class="assurance small-assurance"><span class="assurance-icon">▣</span><span><b>GIAO HÀNG</b><small>TOÀN QUỐC</small></span></div>
-      </div>
-    </div>
-  </header>
-
-  <nav class="category-nav" aria-label="Danh mục chính">
-    <div class="category-inner">
-      <a class="nav-tet" href="https://thegioiinan.com/" target="_blank" rel="noopener noreferrer">ẤN PHẨM TẾT <span>Mới</span></a>
-      <a href="#bao-gia">VĂN PHÒNG⌄</a>
-      <a href="#bao-gia">TIẾP THỊ⌄</a>
-      <a href="#bao-gia">BAO BÌ⌄</a>
-      <a href="#bao-gia">CÁ NHÂN⌄</a>
-      <a href="#bao-gia">QUÀ TẶNG⌄</a>
-      <a href="#bao-gia">ẤN PHẨM KHÁC⌄</a>
-      <a href="#bao-gia">IN NHANH⌄</a>
-    </div>
-  </nav>
-
-  <main class="page-content" id="bao-gia">
-    <div class="quote-layout">
-      <div class="quote-column">
-        <h1>Yêu cầu báo giá</h1>
-        <ul class="help-intro">
-          <li>Các yêu cầu báo giá có thể mất từ <b>2h–24h</b> tùy thuộc vào quy cách của sản phẩm và khối lượng xử lý trong ngày.</li>
-          <li>Vì vậy để có báo giá nhanh nhất, bạn vui lòng xem bảng giá có sẵn trong từng trang sản phẩm.</li>
-        </ul>
-
-        <form class="quote-form" autocomplete="on" action="#" method="get">
-          <div class="field">
-            <label for="product-name">Tên sản phẩm</label>
-            <div class="select-holder">
-              <input id="product-name" name="product-name" type="text" placeholder="Chọn hoặc nhập tên sản phẩm" list="products" autocomplete="off">
-              <span class="select-arrow" aria-hidden="true">⌄</span>
-              <datalist id="products">
-                <option value="Danh thiếp"></option>
-                <option value="Tờ rơi"></option>
-                <option value="Bao thư"></option>
-                <option value="Túi giấy"></option>
-                <option value="Hộp giấy"></option>
-                <option value="Catalogue"></option>
-              </datalist>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="print-request">Thông tin yêu cầu</label>
-            <textarea id="print-request" name="print-request" rows="5" placeholder="Nhập thông tin yêu cầu"></textarea>
-          </div>
-
-          <div class="field">
-            <label for="quantity-1">Số lượng</label>
-            <div class="quantity-row">
-              <input id="quantity-1" name="quantity-1" type="number" min="1" placeholder="Số lượng 1" aria-label="Số lượng 1">
-              <input id="quantity-2" name="quantity-2" type="number" min="1" placeholder="Số lượng 2" aria-label="Số lượng 2">
-              <input id="quantity-3" name="quantity-3" type="number" min="1" placeholder="Số lượng 3" aria-label="Số lượng 3">
-            </div>
-          </div>
-
-          <fieldset class="priority-group">
-            <legend>Ưu tiên điều gì</legend>
-            <div class="priority-options">
-              <label class="priority-choice"><input type="radio" name="priority" value="cost" checked><span><b aria-hidden="true">▧</b> Tối ưu chi phí</span></label>
-              <label class="priority-choice"><input type="radio" name="priority" value="time"><span><b aria-hidden="true">◴</b> Ưu tiên thời gian</span></label>
-              <label class="priority-choice"><input type="radio" name="priority" value="none"><span><b aria-hidden="true">◉</b> Không cần ưu tiên</span></label>
-            </div>
-          </fieldset>
-
-          <!-- TÍNH NĂNG CẢI TIẾN: CSS :has() điều khiển khối thông tin theo 2 nhóm radio -->
-          <section class="contact-addon" aria-labelledby="contact-heading">
-            <div class="contact-addon-heading">
-              <div class="contact-heading-copy">
-                <span class="contact-heading-icon" aria-hidden="true">✉</span>
-                <div><h2 id="contact-heading">Phương thức liên hệ nhận báo giá <span class="new-badge">MỚI</span></h2><p>Chọn thông tin và kênh liên hệ phù hợp với bạn.</p></div>
-              </div>
-            </div>
-
-            <fieldset class="source-selection">
-              <legend><span class="step-no">1</span> Sử dụng thông tin liên hệ</legend>
-              <div class="source-options">
-                <label class="select-card">
-                  <input type="radio" name="contact-source" id="source-account" value="account" checked>
-                  <span class="radio-dot" aria-hidden="true"></span>
-                  <span><strong>Thông tin tài khoản</strong><small>Dữ liệu tài khoản giả lập</small></span>
-                </label>
-                <label class="select-card">
-                  <input type="radio" name="contact-source" id="source-custom" value="custom">
-                  <span class="radio-dot" aria-hidden="true"></span>
-                  <span><strong>Thông tin liên hệ khác</strong><small>Nhập thông tin mới</small></span>
-                </label>
-              </div>
-            </fieldset>
-
-            <fieldset class="channel-selection">
-              <legend><span class="step-no">2</span> Muốn nhận báo giá qua</legend>
-              <div class="channel-options">
-                <label class="channel-card">
-                  <input type="radio" name="contact-channel" id="channel-email" value="email" checked>
-                  <span class="channel-icon" aria-hidden="true">✉</span> Email
-                </label>
-                <label class="channel-card">
-                  <input type="radio" name="contact-channel" id="channel-phone" value="phone">
-                  <span class="channel-icon" aria-hidden="true">☎</span> Điện thoại
-                </label>
-                <label class="channel-card">
-                  <input type="radio" name="contact-channel" id="channel-zalo" value="zalo">
-                  <span class="channel-icon zalo-icon" aria-hidden="true">Z</span> Zalo
-                </label>
-              </div>
-            </fieldset>
-
-            <div class="contact-detail" aria-live="off">
-              <div class="contact-detail-title"><span aria-hidden="true">✓</span> <strong>Thông tin nhận báo giá đã chọn</strong></div>
-              <div class="contact-pane account-email"><span class="detail-kicker">EMAIL TÀI KHOẢN (GIẢ LẬP)</span><strong>khachhang@example.com</strong><p>Báo giá sẽ được minh họa theo địa chỉ email này.</p></div>
-              <div class="contact-pane account-phone"><span class="detail-kicker">SỐ ĐIỆN THOẠI TÀI KHOẢN (GIẢ LẬP)</span><strong>0900 000 000</strong><p>Số điện thoại chỉ để minh họa giao diện.</p></div>
-              <div class="contact-pane account-zalo"><span class="detail-kicker">ZALO TÀI KHOẢN (GIẢ LẬP)</span><strong>0900 000 000</strong><p>Số Zalo chỉ để minh họa giao diện.</p></div>
-              <div class="contact-pane custom-email"><label for="custom-email-input">Email nhận báo giá khác</label><input id="custom-email-input" name="custom-email" type="email" placeholder="Ví dụ: tenban@congty.vn" autocomplete="email"><p>Nhập địa chỉ email bạn muốn sử dụng.</p></div>
-              <div class="contact-pane custom-phone"><label for="custom-phone-input">Số điện thoại nhận báo giá khác</label><input id="custom-phone-input" name="custom-phone" type="tel" inputmode="tel" placeholder="Ví dụ: 09xx xxx xxx" autocomplete="tel"><p>Nhập số điện thoại để được liên hệ.</p></div>
-              <div class="contact-pane custom-zalo"><label for="custom-zalo-input">Số điện thoại Zalo khác</label><input id="custom-zalo-input" name="custom-zalo" type="tel" inputmode="tel" placeholder="Ví dụ: 09xx xxx xxx"><p>Nhập số điện thoại dùng cho tài khoản Zalo.</p></div>
-            </div>
-            <p class="privacy-note">▣ &nbsp;Các thông tin trong trang này chỉ phục vụ bài tập mô phỏng, không được gửi hay lưu trên hệ thống.</p>
-          </section>
-
-          <button class="quote-button" type="button" aria-describedby="demo-note">GỬI YÊU CẦU BÁO GIÁ <span aria-hidden="true">→</span></button>
-          <p class="submit-note" id="demo-note">Bản thực hành giao diện HTML5/CSS3 – nút không thực hiện gửi dữ liệu.</p>
-        </form>
-      </div>
-
-      <aside class="quote-aside" id="huong-dan" aria-label="Thông tin tư vấn báo giá">
-        <div class="advice-box">
-          <div class="advice-copy">
-            <h2>Chi phí rõ ràng,<br>lựa chọn dễ dàng.</h2>
-            <p class="worktime-heading">◴ &nbsp;Thời gian làm việc</p>
-            <p><b>Sáng:</b> 8h00 - 12h00<br><b>Chiều:</b> 13h30 - 17h30<br><b>Thứ 7:</b> 8h - 12h00<br><span>(Nghỉ chiều Thứ 7 &amp; Chủ nhật)</span></p>
-          </div>
-          <img class="mascot" src="assets/minh-hoa-tu-van.png" width="250" height="241" alt="Minh họa nhân viên tư vấn miễn phí bên máy tính, theo ảnh website tham khảo">
+  <main id="main">
+    <!-- KHU VỰC DUY NHẤT ĐƯỢC THIẾT KẾ LẠI THEO YÊU CẦU -->
+    <section class="container hero-wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">✦ In ấn chuyên nghiệp &nbsp;·&nbsp; Giao hàng toàn quốc</p>
+        <h1 id="hero-title">Bạn cần in gì <span>hôm nay?</span></h1>
+        <p class="hero-description">Chọn sản phẩm, tùy chỉnh hoặc gửi yêu cầu để nhận báo giá nhanh chóng.</p>
+        <div class="hero-ctas" aria-label="Bắt đầu đặt in">
+          <a class="hero-cta hero-cta-primary" href="#categories"><span class="cta-icon">⌕</span><span><strong>Tìm sản phẩm</strong><small>Xem danh mục & giá</small></span><span class="cta-arrow">›</span></a>
+          <a class="hero-cta" href="#quote"><span class="cta-icon">▤</span><span><strong>Báo giá nhanh</strong><small>Gửi yêu cầu in</small></span><span class="cta-arrow">›</span></a>
+          <a class="hero-cta" href="#penci"><span class="cta-icon">✎</span><span><strong>Tự thiết kế</strong><small>Chọn mẫu Penci</small></span><span class="cta-arrow">›</span></a>
+          <a class="hero-cta" href="#reorder"><span class="cta-icon">↺</span><span><strong>In lại đơn cũ</strong><small>Tra cứu & đặt lại</small></span><span class="cta-arrow">›</span></a>
         </div>
-      </aside>
-    </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true"><img src="assets/hero-products.jpg" alt=""></div>
+    </section>
+
+    <!-- Các section phía dưới giữ nguyên thứ tự, tên gọi, dạng hiển thị so với trang chủ gốc -->
+    <section class="container categories-section" id="categories" aria-labelledby="category-title"><h2 class="section-title" id="category-title">Ấn phẩm <span>văn phòng</span></h2>
+      <div class="category-grid">
+        <a href="#products" class="category-item"><img src="assets/cat-1.png" alt=""><span>Bìa đựng hồ sơ</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-2.png" alt=""><span>Danh thiếp</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-3.png" alt=""><span>Giấy tiêu đề</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-4.png" alt=""><span>Bao thư</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-5.png" alt=""><span>Vé</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-6.png" alt=""><span>Tờ gấp</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-7.png" alt=""><span>Poster</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-8.png" alt=""><span>Tờ rơi</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-9.png" alt=""><span>Catalogue</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-10.png" alt=""><span>Phiếu Quà Tặng</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-11.png" alt=""><span>Hộp Giấy</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-12.png" alt=""><span>Túi giấy</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-13.png" alt=""><span>Nhãn Dán</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-14.png" alt=""><span>Mác sản phẩm</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-15.png" alt=""><span>Biểu Mẫu</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-16.png" alt=""><span>Thẻ nhựa</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-17.png" alt=""><span>Thực Đơn</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-18.png" alt=""><span>Giấy ghi chú</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-19.png" alt=""><span>Phiếu bảo hành</span></a>
+        <a href="#products" class="category-item"><img src="assets/cat-20.png" alt=""><span>Thiệp Mời</span></a>
+      </div>
+    </section>
+
+    <section class="section-tinted penci-section" id="penci"><div class="container"><div class="section-heading"><h2 class="section-title">Thiết kế cùng <em>penci</em></h2><a href="#penci">Xem tất cả</a></div><div class="penci-layout">
+      <a href="#penci" class="penci-large"><span class="penci-decoration">✿ ✿ ✿</span><small>Thế giới in ấn × penci</small><strong>Hơn <b>412.000</b> mẫu</strong><span>theo chủ đề sẵn sàng<br>để dàng tùy chỉnh</span><p>Chúc mừng ngày Phụ Nữ Việt Nam 20/10</p></a>
+      <div class="penci-thumbs"><a href="#penci"><img src="assets/penci-1.jpg" alt="Mẫu cờ phướn"><span>Cờ phướn</span></a><a href="#penci"><img src="assets/penci-2.jpg" alt="Mẫu poster"><span>Poster chuẩn</span></a><a href="#penci"><img src="assets/penci-3.jpg" alt="Mẫu bài đăng mạng xã hội"><span>Post MXH vuông</span></a><a href="#penci"><img src="assets/penci-4.jpg" alt="Mẫu túi canvas"><span>Túi canvas</span></a><a href="#penci"><img src="assets/penci-2.jpg" alt="Mẫu hashtag"><span>Hashtag cầm tay</span></a><a href="#penci"><img src="assets/penci-3.jpg" alt="Mẫu thư mời"><span>Thư mời</span></a><a href="#penci"><img src="assets/penci-4.jpg" alt="Mẫu thiệp"><span>Thiệp chúc mừng</span></a><a href="#penci"><img src="assets/penci-1.jpg" alt="Mẫu ảnh đại diện"><span>Ảnh đại diện</span></a></div>
+    </div></div></section>
+
+    <section class="section-tinted voucher-section"><div class="container"><div class="section-heading"><h2 class="section-title">Voucher <span>giảm giá</span></h2><a href="#voucher-list">Xem tất cả voucher</a></div><div class="voucher-grid" id="voucher-list"><div class="voucher voucher-green"><span>▧<small>Menu tờ rơi</small></span><div><strong>Giảm 5%</strong><small>HSD: 09/11/2026</small><button class="voucher-button" type="button">Lấy mã</button></div></div><div class="voucher voucher-yellow"><span>✉<small>Bao thư trung</small></span><div><strong>Giảm 5%</strong><small>HSD: 09/11/2026</small><button class="voucher-button" type="button">Lấy mã</button></div></div><div class="voucher voucher-green"><span>▤<small>Dây đeo thẻ</small></span><div><strong>Giảm 5%</strong><small>HSD: 09/11/2026</small><button class="voucher-button" type="button">Lấy mã</button></div></div><div class="voucher voucher-yellow"><span>▣<small>Đơn hàng</small></span><div><strong>Giảm 10%</strong><small>HSD: 20/12/2027</small><button class="voucher-button" type="button">Lấy mã</button></div></div><div class="voucher voucher-green"><span>▧<small>Thẻ tích điểm</small></span><div><strong>Giảm 5%</strong><small>HSD: 09/11/2026</small><button class="voucher-button" type="button">Lấy mã</button></div></div></div></div></section>
+
+    <section class="section-tinted products-section" id="products"><div class="container"><h2 class="section-title">Ấn phẩm <span>phổ biến</span></h2><p class="search-result" role="status" aria-live="polite" hidden></p><div class="products-grid" id="products-grid">
+      <article class="product-card" data-name="nhãn decal giấy"><a href="#quote"><img src="assets/product-3.jpg" alt="Nhãn decal giấy"></a>
+        <p class="product-category">Nhãn Dán - Decal Label</p>
+        <h3>NHÃN DECAL GIẤY</h3>
+        <p class="product-price"><strong>Chỉ từ 85đ/ nhãn</strong></p>
+      </article>
+      <article class="product-card" data-name="hashtag cầm tay"><a href="#quote"><img src="assets/product-2.jpg" alt="Hashtag cầm tay"></a>
+        <p class="product-category">Poster - Băng rôn - Standee</p>
+        <h3>HASHTAG CẦM TAY</h3>
+        <p class="product-price"><strong>Chỉ từ 25.000đ/ Cái</strong></p>
+      </article>
+      <article class="product-card" data-name="danh thiếp chuẩn"><a href="#quote"><img src="assets/product-1.jpg" alt="Danh thiếp chuẩn"></a>
+        <p class="product-category">Danh thiếp - Namecards</p>
+        <h3>DANH THIẾP CHUẨN</h3>
+        <p class="product-price"><strong>Chỉ từ 16.000đ/hộp</strong></p>
+      </article>
+      <article class="product-card" data-name="poster chất liệu pp"><a href="#quote"><img src="assets/product-4.jpg" alt="Poster chất liệu PP"></a>
+        <p class="product-category">Poster - Băng rôn - Standee</p>
+        <h3>POSTER CHẤT LIỆU PP</h3>
+        <p class="product-price"><strong>Chỉ từ 50.000đ/m2</strong></p>
+      </article>
+      <article class="product-card" data-name="nhãn decal nhựa"><a href="#quote"><img src="assets/product-8.jpg" alt="Nhãn decal nhựa"></a>
+        <p class="product-category">Nhãn Dán - Decal Label</p>
+        <h3>NHÃN DECAL NHỰA</h3>
+        <p class="product-price"><strong>Chỉ từ 100đ/ nhãn</strong></p>
+      </article>
+      <article class="product-card" data-name="danh thiếp giấy mỹ thuật"><a href="#quote"><img src="assets/product-5.jpg" alt="Danh thiếp giấy mỹ thuật"></a>
+        <p class="product-category">Danh thiếp - Namecards</p>
+        <h3>DANH THIẾP GIẤY MỸ THUẬT</h3>
+        <p class="product-price"><strong>Chỉ từ 80.000đ/ hộp</strong></p>
+      </article>
+      <article class="product-card" data-name="băng rôn hiflex"><a href="#quote"><img src="assets/product-6.jpg" alt="Băng rôn Hiflex"></a>
+        <p class="product-category">Poster - Băng rôn - Standee</p>
+        <h3>BĂNG RÔN HIFLEX</h3>
+        <p class="product-price"><strong>Chỉ từ 30.000đ/m2</strong></p>
+      </article>
+      <article class="product-card" data-name="túi vải không dệt"><a href="#quote"><img src="assets/product-4.jpg" alt="Túi vải không dệt"></a>
+        <p class="product-category">Áo Thun</p>
+        <h3>TÚI VẢI KHÔNG DỆT</h3>
+        <p class="product-price"><strong>Liên hệ báo giá</strong></p>
+      </article>
+      <article class="product-card" data-name="pp bồi format"><a href="#quote"><img src="assets/product-7.jpg" alt="PP bồi Format"></a>
+        <p class="product-category">Poster - Băng rôn - Standee</p>
+        <h3>PP BỒI FORMAT</h3>
+        <p class="product-price"><strong>Chỉ từ 62.370đ/tấm</strong></p>
+      </article>
+      <article class="product-card" data-name="catalogue tiêu chuẩn"><a href="#quote"><img src="assets/product-2.jpg" alt="Catalogue tiêu chuẩn"></a>
+        <p class="product-category">Catalogue - Cẩm Nang</p>
+        <h3>CATALOGUE TIÊU CHUẨN</h3>
+        <p class="product-price"><strong>Chỉ từ 3.600đ/cuốn</strong></p>
+      </article>
+      <article class="product-card" data-name="decal khổ lớn"><a href="#quote"><img src="assets/product-7.jpg" alt="Decal khổ lớn"></a>
+        <p class="product-category">Poster - Băng rôn - Standee</p>
+        <h3>DECAL KHỔ LỚN</h3>
+        <p class="product-price"><strong>Chỉ từ 140.000đ/m2</strong></p>
+      </article>
+      <article class="product-card" data-name="hashtag tay cầm rời"><a href="#quote"><img src="assets/product-3.jpg" alt="Hashtag tay cầm rời"></a>
+        <p class="product-category">Poster - Băng rôn - Standee</p>
+        <h3>HASHTAG TAY CẦM RỜI</h3>
+        <p class="product-price"><strong>Liên hệ báo giá</strong></p>
+      </article>
+      <article class="product-card" data-name="danh thiếp kỹ thuật số"><a href="#quote"><img src="assets/product-1.jpg" alt="Danh thiếp kỹ thuật số"></a>
+        <p class="product-category">Danh thiếp - Namecards</p>
+        <h3>DANH THIẾP KỸ THUẬT SỐ</h3>
+        <p class="product-price"><strong>Chỉ từ 70.000đ/hộp</strong></p>
+      </article>
+      <article class="product-card" data-name="tranh canvas"><a href="#quote"><img src="assets/product-5.jpg" alt="Tranh Canvas"></a>
+        <p class="product-category">Poster - Băng rôn - Standee</p>
+        <h3>TRANH CANVAS</h3>
+        <p class="product-price"><strong>Chỉ từ 150.000đ/m2</strong></p>
+      </article>
+      <article class="product-card" data-name="nhãn decal giấy kraft"><a href="#quote"><img src="assets/product-8.jpg" alt="Nhãn decal giấy kraft"></a>
+        <p class="product-category">Nhãn Dán - Decal Label</p>
+        <h3>NHÃN DECAL GIẤY KRAFT</h3>
+        <p class="product-price"><strong>Chỉ từ 85đ/ nhãn</strong></p>
+      </article>
+    </div></div></section>
+
+    <section class="container trust-band" aria-label="Cam kết dịch vụ"><div><span>✍</span><strong>THIẾT KẾ & KIỂM TRA FILE</strong><small>miễn phí</small></div><div><span>♙</span><strong>IN & NHẬN MẪU</strong><small>miễn phí</small></div><div><span>▣</span><strong>THEO DÕI TIẾN ĐỘ</strong><small>trực tuyến</small></div><div><span>★</span><strong>VỚI 14 NĂM</strong><small>kinh nghiệm</small></div><div><span>◎</span><strong>HƠN 300.000 ĐƠN</strong><small>hoàn thành</small></div><div><span>♧</span><strong>ĐỘI NGŨ GIAO HÀNG</strong><small>riêng biệt</small></div></section>
+    <section class="section-tinted partners-section"><div class="container"><h2 class="section-title">Đối tác <span>tin cậy</span></h2><div class="partner-logos"><b>KÄRCHER</b><b>Jump</b><b>PLATINUM</b><b>CUSHMAN & WAKEFIELD</b><b>HYOSUNG</b><b>daewon</b><b>ACB</b><b>H&amp;M</b></div></div></section>
+    <section class="section-tinted article-section" id="articles"><div class="container"><div class="section-heading"><h2 class="section-title">Có thể <span>bạn chưa biết?</span></h2><a href="#articles">Xem tất cả</a></div><div class="article-grid"><article><div class="article-picture">📦</div><small>15/10/2026</small><h3>Cần đặt in online? 5 điều cần biết khi chọn nhà in</h3></article><article><div class="article-picture">🚚</div><small>14/10/2026</small><h3>Chính sách giao - nhận và đổi trả tại Thế Giới In Ấn</h3></article><article><div class="article-picture">💳</div><small>14/10/2026</small><h3>Thanh toán và in ấn: Những điều khách hàng cần biết</h3></article><article><div class="article-picture">🖨️</div><small>14/10/2026</small><h3>Hướng dẫn chuẩn bị file thiết kế trước khi in</h3></article></div></div></section>
   </main>
+  <section class="support-bar" aria-labelledby="support-title"><div class="container support-content"><div><h2 id="support-title">Tư vấn đặt hàng</h2><p>🕘 &nbsp; <b>Thứ 2 - Thứ 6:</b> Sáng: 8h00 - 12h00 / Chiều: 13h30 - 17h30</p><p>☀️ &nbsp; <b>Sáng Thứ 7:</b> 8h00 - 12h00</p><p>🛑 &nbsp; <b>Nghỉ làm:</b> Chiều T7 và CN</p></div><div class="staff-list"><span>● &nbsp; Zalo THU HỒNG<br><b>0964 235 557</b></span><span>● &nbsp; Zalo HÒA NHI<br><b>0979 30 72 30</b></span><span>● &nbsp; Zalo NGỌC NGUYỄN<br><b>0966 373 715</b></span><span>● &nbsp; Zalo HỒNG NGỌC<br><b>0906 684 786</b></span><span>● &nbsp; Zalo TÂM NHƯ<br><b>0938 801 068</b></span><span>● &nbsp; Zalo MỸ VÂN<br><b>0902 31 31 93</b></span></div></div></section>
+  <footer class="site-footer"><div class="container footer-grid"><div><div class="footer-logo">🌈 thếgiớiinấn</div><p>CTY TNHH MTV THẾ GIỚI IN ẤN<br>GPDKKD số: 0311659980<br>Ngày cấp: 23/03/2012</p><h3>THƯƠNG HIỆU THÀNH VIÊN</h3><p><b>penci</b> &nbsp; Simple &nbsp; gud</p></div><div><h3>CHÍNH SÁCH</h3><p>Chính sách giao hàng</p><p>Thỏa thuận sử dụng</p><p>Chính sách đổi trả hàng</p><p>Chính sách bảo mật</p><h3>VĂN PHÒNG</h3><p>193/9 Điện Biên Phủ, Gia Định, Hồ Chí Minh</p></div><div><h3>HƯỚNG DẪN</h3><p>Đặt hàng online</p><p>Hình thức thanh toán</p><p>Hợp tác & Góp ý</p><p>Cài đặt cookie</p><h3>NHÀ XƯỞNG</h3><p>Số 09 đường 687, KP60, Phước Long, Hồ Chí Minh</p></div><div><h3>PHƯƠNG THỨC THANH TOÁN</h3><p class="payment">Mastercard &nbsp; VISA &nbsp; MoMo</p><h3>HỢP TÁC & GÓP Ý DỊCH VỤ</h3><p>Đồng hành cùng Thế Giới In Ấn</p></div></div></footer>
 
-  <section class="support-strip" id="don-hang" aria-label="Tư vấn đặt hàng">
-    <div class="support-inner">
-      <div class="support-hours">
-        <h2>Tư vấn đặt hàng</h2>
-        <p><span>◉</span> <b>Thứ 2 - Thứ 6:</b><br> &nbsp;&nbsp;&nbsp;&nbsp;Sáng 8h00-12h00/Chiều 13h30-17h30</p>
-        <p><span>☀</span> <b>Sáng Thứ 7:</b> 8h00-12h00</p>
-        <p><span>⊖</span> <b>Nghỉ làm:</b> Chiều T7 và CN</p>
-      </div>
-      <div class="support-chips" aria-label="Các vị trí tư vấn minh họa">
-        <div class="support-chip"><span>TV</span><p><small>Zalo tư vấn</small><b>Hỗ trợ đặt in</b></p></div>
-        <div class="support-chip"><span>TV</span><p><small>Zalo tư vấn</small><b>Hỗ trợ báo giá</b></p></div>
-        <div class="support-chip"><span>TV</span><p><small>Zalo tư vấn</small><b>Hỗ trợ sản phẩm</b></p></div>
-        <div class="support-chip"><span>TV</span><p><small>Zalo tư vấn</small><b>Hỗ trợ giao hàng</b></p></div>
-        <div class="support-chip"><span>TV</span><p><small>Zalo tư vấn</small><b>Hỗ trợ đơn hàng</b></p></div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-business">
-        <img src="assets/logo-footer-tham-khao.png" alt="Thế Giới In Ấn" width="134" height="38">
-        <p>CTY TNHH MTV THẾ GIỚI IN ẤN<br>GPDKKD số: 0311659980<br>Ngày cấp: 23/03/2012</p>
-      </div>
-      <div class="footer-col"><h3>CHÍNH SÁCH</h3><a href="https://thegioiinan.com/" target="_blank" rel="noopener noreferrer">Chính sách giao hàng</a><a href="https://thegioiinan.com/" target="_blank" rel="noopener noreferrer">Thoả thuận sử dụng</a><a href="https://thegioiinan.com/" target="_blank" rel="noopener noreferrer">Chính sách đổi trả hàng</a><a href="https://thegioiinan.com/" target="_blank" rel="noopener noreferrer">Chính sách bảo mật</a></div>
-      <div class="footer-col"><h3>HƯỚNG DẪN</h3><a href="https://thegioiinan.com/" target="_blank" rel="noopener noreferrer">Đặt hàng online</a><a href="https://thegioiinan.com/" target="_blank" rel="noopener noreferrer">Hình thức thanh toán</a><a href="https://thegioiinan.com/" target="_blank" rel="noopener noreferrer">Hợp tác &amp; Góp ý</a><a href="https://thegioiinan.com/" target="_blank" rel="noopener noreferrer">Cài đặt cookie</a></div>
-      <div class="footer-col"><h3>PHƯƠNG THỨC THANH TOÁN</h3><div class="payment-badges"><span>Mastercard</span><span>VISA</span><span>MoMo</span><span>VNPay</span><span>Chuyển khoản</span></div></div>
-    </div>
-    <p class="demo-disclaimer">Bài thực hành HTML5/CSS3 mô phỏng giao diện theo ảnh do người học cung cấp. Không phải trang chính thức của Thế Giới In Ấn và không tiếp nhận yêu cầu báo giá.</p>
-  </footer>
+  <!-- Chỉ là các bảng demo mặt trước: không gửi dữ liệu tới máy chủ -->
+  <div id="quote" class="overlay" role="region" aria-labelledby="quote-title"><div class="overlay-card"><a class="close-overlay" href="#top" aria-label="Đóng">×</a><h2 id="quote-title">Yêu cầu báo giá nhanh</h2><p>Đây là biểu mẫu minh họa giao diện, không gửi thông tin đến hệ thống.</p><form id="quote-form"><label>Sản phẩm cần in <input name="product" required placeholder="Ví dụ: Danh thiếp, tờ rơi"></label><label>Số lượng <input name="quantity" type="number" min="1" required placeholder="Ví dụ: 500"></label><label>Ghi chú quy cách <textarea name="details" rows="3" placeholder="Kích thước, chất liệu, thời gian cần..."></textarea></label><button type="submit" class="form-submit">Tạo yêu cầu mẫu</button><p class="form-feedback" role="status" aria-live="polite"></p></form></div></div>
+  <div id="reorder" class="overlay" role="region" aria-labelledby="reorder-title"><div class="overlay-card"><a class="close-overlay" href="#top" aria-label="Đóng">×</a><h2 id="reorder-title">Tra cứu / In lại đơn cũ</h2><p>Chức năng cần hệ thống đơn hàng để hoạt động. Bản HTML/CSS này chỉ mô phỏng bước nhập mã đơn.</p><form id="reorder-form"><label>Mã đơn hàng <input name="order" required placeholder="Ví dụ: TGI-123456"></label><button type="submit" class="form-submit">Kiểm tra mã đơn (demo)</button><p class="form-feedback" role="status" aria-live="polite"></p></form></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
