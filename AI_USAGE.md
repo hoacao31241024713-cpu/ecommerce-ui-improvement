@@ -1,102 +1,78 @@
-# AI Usage Log
+# AI Usage Log – Bài tập cá nhân Buổi 2
 
-## 1. Công cụ AI
+**Môn học:** Phát triển ứng dụng Thương mại điện tử  
+**Website thực hành:** Thế Giới In Ấn (giao diện tiếp tục từ Buổi 1)  
 
-- **Tên công cụ:** ChatGPT (OpenAI).
-- **Phạm vi:** Hỗ trợ phân tích, đề xuất thiết kế và tạo mã nguồn giao diện cho bài tập cá nhân Chương 1.
+## 1. Công cụ AI đã sử dụng
 
-## 2. Mục đích sử dụng
+- **Công cụ:** ChatGPT (OpenAI).
+- **Mục đích:** Hỗ trợ rà soát mã HTML5/CSS3 hiện có, giải thích kỹ thuật, đề xuất chỉnh sửa có phạm vi nhỏ và hỗ trợ phân tích lỗi giao diện. AI không thay thế việc tự chạy website và kiểm tra kết quả.
 
-Sử dụng AI để phân tích website tham khảo **Thế Giới In Ấn** (https://thegioiinan.com/), xác định phương án cải tiến mục **Yêu cầu báo giá**, đề xuất bố cục UI/UX và hỗ trợ tạo, giải thích mã nguồn HTML5/CSS3. Mục tiêu là cho khách hàng lựa chọn **thông tin tài khoản giả lập hoặc thông tin liên hệ khác**, với kênh nhận báo giá ưu tiên là **Email, Điện thoại hoặc Zalo**.
+## 2. Phạm vi thực hành
 
-## 3. Prompt đã sử dụng
+Tập trung cải tiến khu vực **“Ấn phẩm phổ biến”** của website đã xây dựng trong Buổi 1. Nội dung gồm: tổ chức thông tin sản phẩm bằng HTML5; CSS selector và Box Model; Flexbox bên trong Product Card; CSS Grid cho danh sách sản phẩm; hiệu ứng hover, focus-visible và transition; xem xét khả năng hiển thị trên điện thoại.
 
-**Prompt 1 – Phân tích website:**
+## 3. Các yêu cầu/prompt đã trao đổi với AI
 
-Bạn là chuyên gia phân tích nghiệp vụ và thiết kế trải nghiệm người dùng
-cho website thương mại điện tử.
-Tôi đang khảo sát website:  thegioiinan.com (https://thegioiinan.com/).  
-Hãy giúp tôi lập bảng phân tích các khu vực:
-1. Trang chủ.
-2. Danh mục sản phẩm.
-3. Chi tiết sản phẩm.
-4. Tìm kiếm.
-5. Giỏ hàng.
-6.Yêu cầu báo giá
-Với mỗi khu vực, hãy nêu:
-- Mục đích của chức năng.
-- Thành phần giao diện cần có.
-- Điểm thuận tiện đối với khách hàng.
-- Một vấn đề có thể phát sinh.
-- Một đề xuất cải tiến.
-Không khẳng định những tính năng chưa được kiểm chứng.
-Phân biệt rõ nhận xét dựa trên quan sát và đề xuất của AI.
+Các trích dẫn dưới đây là những yêu cầu tiêu biểu đã sử dụng trong quá trình làm bài; không phải toàn bộ lịch sử trò chuyện.
 
-**Prompt 2 – Đề xuất phương án thiết kế:**
-Tôi đang thực hiện bài tập phát triển giao diện website thương mại điện tử
-bằng HTML5 và CSS3.
+**Prompt 1 – Kiểm tra và cải thiện mã nguồn theo từng bước**  
+Yêu cầu AI dựa trên `index.html` và `style.css` hiện có, chỉ ra phần cần cải thiện và hướng dẫn chỉnh sửa tối thiểu; không viết lại toàn bộ website.
 
-Tôi muốn cải tiến khu vực: Theo ghi nhận khảo sát ban đầu của tôi, khu vực Yêu cầu báo giá hiện tại sử dụng thông tin liên hệ lấy từ tài khoản đăng nhập của khách hàng, chưa cung cấp lựa chọn để khách hàng chủ động nhập thông tin liên hệ khác hoặc lựa chọn kênh nhận báo giá mong muốn.
-Điều này có thể gây bất tiện khi khách hàng muốn nhận báo giá qua một số điện thoại, địa chỉ email hoặc tài khoản liên hệ khác với thông tin đã đăng ký..
+**Prompt 2 – Bước 5: Thực hành Flexbox**  
+Yêu cầu giải thích và áp dụng `display: flex`, `flex-direction`, `justify-content`, `align-items` và `gap` cho nội dung bên trong các Product Card của khu vực “Ấn phẩm phổ biến”.
 
-Đối tượng sử dụng: khách hàng mua sắm trực tuyến tại Việt Nam.
+**Prompt 3 – Bước 6: Thực hành CSS Grid**  
+Yêu cầu chỉ rõ sự khác nhau giữa Flexbox và Grid; thực hành thay đổi bố cục danh sách sản phẩm thành hai và ba cột, giải thích `grid-template-columns`, `repeat()`, `gap` và `object-fit: cover`.
 
-Hãy đề xuất:
-1. Bố cục giao diện.
-2. Các thành phần HTML cần sử dụng.
-3. Cách tổ chức CSS.
-4. Cách hiển thị trên máy tính và điện thoại.
-5. Những điểm cần kiểm tra về khả năng sử dụng.
+**Prompt 4 – Bước 7: Hover, focus và transition**  
+> “Tôi muốn bổ sung hiệu ứng hover và focus cho một nút bấm hoặc liên kết trong website… Tạo hiệu ứng hover nhẹ; sử dụng transition; bổ sung focus-visible; đảm bảo màu chữ và màu nền dễ nhìn; không làm thay đổi bố cục quá nhiều.”
 
-Trước tiên, hãy giải thích phương án thiết kế.
-Chưa tạo toàn bộ mã nguồn cho đến khi tôi yêu cầu.
+Sau đó, em yêu cầu thẻ sản phẩm phóng to nhẹ khi rê chuột và chuyển dòng “Xem chi tiết” thành lớp phủ xuất hiện trực tiếp trên ảnh sản phẩm.
 
-**Prompt 3 – Tạo mã nguồn:**
-Dựa trên phương án đã thống nhất, hãy tạo một trang giao diện **Yêu cầu báo giá** cho website Thế Giới In Ấn (https://thegioiinan.com/) bằng HTML5 và CSS3.
+**Prompt 5 – Bước 8: Phân tích lỗi responsive**  
+> “Tôi thấy 1 lỗi khá [đáng chú ý] khi hiển thị trên điện thoại: các box ấn phẩm phổ biến dài và chữ lại quá nhỏ.”
 
-Yêu cầu:
-- Giao diện có tiêu đề, thông tin sản phẩm in ấn mẫu và khu vực yêu cầu báo giá.
-- Bổ sung mục **“Phương thức liên hệ nhận báo giá”**.
-- Cho phép lựa chọn sử dụng thông tin tài khoản giả lập hoặc nhập thông tin liên hệ khác.
-- Có 3 phương thức nhận báo giá: Email, Điện thoại và Zalo.
-- Hiển thị trường nhập thông tin phù hợp với phương thức liên hệ được chọn.
-- Có nút gửi yêu cầu báo giá (chỉ mô phỏng giao diện, không gửi dữ liệu thực tế).
-- Bố cục phù hợp với màn hình máy tính và điện thoại.
-- Mã HTML có cấu trúc rõ ràng.
-- CSS được tách thành file riêng.
-- Không sử dụng backend hoặc cơ sở dữ liệu.
-- Không đưa thư viện hoặc thành phần không cần thiết vào dự án.
+Yêu cầu AI phân biệt nguyên nhân xác định từ mã CSS với giả thuyết cần kiểm tra, đồng thời đề xuất sửa ít thay đổi nhất.
 
-Giải thích cách chạy trang web và những phần tôi cần kiểm tra.
-## 4. Kết quả AI đề xuất
+**Prompt 6 – Hoàn thiện báo cáo và README**  
+Yêu cầu AI giải thích các thuộc tính CSS dựa trên mã nguồn thực tế, hỗ trợ viết phần tự đánh giá và cấu trúc README; không tự bịa đường dẫn repository, website triển khai hoặc kết quả kiểm thử.
 
-- **Phân tích:** Nhận diện các khu vực trên website và đề xuất cải tiến biểu mẫu báo giá; phân biệt nhận xét từ khảo sát với giả thuyết/đề xuất của AI.
-- **Thiết kế:** Giữ thông tin tài khoản làm lựa chọn mặc định, cho phép dùng thông tin khác; chọn một kênh nhận báo giá ưu tiên (Email, Điện thoại, Zalo).
-- **Mã nguồn:** AI đã tạo `index.html` và `style.css` cho giao diện minh họa có thông tin ấn phẩm mẫu, lựa chọn bằng nút radio, các trường liên hệ và bố cục thích ứng máy tính/điện thoại. CSS sử dụng `:has()` để hiện/ẩn phần thông tin theo lựa chọn.
-- **Giới hạn:** Dữ liệu tài khoản chỉ là mẫu; nút gửi không gửi hay lưu báo giá thực tế; không có backend hoặc cơ sở dữ liệu.
+## 4. Đề xuất của AI và lựa chọn/điều chỉnh
 
-## 5. Kiểm tra và điều chỉnh
+| Nội dung | Đề xuất AI | Quyết định hoặc điều chỉnh trong quá trình thực hành |
+|---|---|---|
+| HTML5 | Tổ chức danh mục và giá trong phần tử `p` riêng | Sử dụng `.product-category` và `.product-price` trong Product Card. |
+| Box Model | Thêm `padding`, `border`, `border-radius` | Áp dụng cách trình bày có đường viền và khoảng đệm cho các thẻ sản phẩm. |
+| Flexbox | Sắp xếp nội dung trong thẻ bằng `flex-direction: column`, `gap` | Lựa chọn thực hành trên Product Card thay vì menu điều hướng. |
+| CSS Grid | Thử bố cục hai/ba cột và so sánh với năm cột trên desktop | Giữ cấu trúc `.products-grid` đã có; nội dung thử nghiệm và ảnh minh chứng cần đối chiếu với kết quả thực tế. |
+| Hover/focus | Hiệu ứng nổi thẻ, nhãn “Xem chi tiết”, `transition` và `focus-visible` | Điều chỉnh nhãn từ cuối thẻ sang lớp phủ trên liên kết ảnh, kết hợp phóng to nhẹ khi hover. |
+| Responsive | Giảm chiều cao Product Card và tăng chữ trên mobile | Đề xuất media query `max-width: 480px`; cần xác nhận đã đưa vào CSS cuối cùng và kiểm tra trên thiết bị. |
 
- **Sinh viên tự hoàn thiện sau khi chạy thử.** Chưa có kết quả kiểm thử hoặc chỉnh sửa thực tế được xác nhận trong cuộc trò chuyện.
+**Ví dụ điều chỉnh đề xuất AI:** Ban đầu, nhãn “Xem chi tiết” được tạo bằng `::after` ở cuối Product Card. Sau khi xem lại bố cục, em yêu cầu đổi thành lớp phủ trên hình ảnh, xuất hiện khi hover hoặc focus bằng `opacity`, `transform` và `transition`. Điều này phù hợp hơn với kiểu tương tác mong muốn. Lớp phủ là pseudo-element của liên kết ảnh, không phải nút HTML độc lập; đích liên kết vẫn phụ thuộc vào `href` trong `index.html`.
 
-- **Trình duyệt và thiết bị/kích thước đã kiểm tra:** Google chrome, máy tính và điện thoại di động
-- **Đã kiểm tra các lựa chọn tài khoản/thông tin khác và Email/Điện thoại/Zalo:** tốt
-- **Kết quả hiển thị trên máy tính và điện thoại:** tốt
-- **Vấn đề tự phát hiện:** các ô chọn vùng phương thức thanh toán hơi nhỏ
-- **Ít nhất một điểm tự chỉnh sửa, lý do và file/dòng liên quan:** bổ sung code 
-## 6. Phần tôi hiểu và có thể giải thích
+## 5. Kiểm tra và giới hạn xác nhận
 
-Các nội dung dưới đây là **gợi ý để tự ôn tập và xác nhận**, chưa phải tuyên bố rằng sinh viên đã hiểu hoặc giải thích được toàn bộ:
+**Các bước kiểm tra cần thực hiện/đối chiếu với ảnh minh chứng:**
 
-| Thành phần | Vai trò cần nắm |
-|---|---|
-| `<form>` | Bao bọc biểu mẫu; trong bài này không xử lý gửi dữ liệu thật. |
-| `<fieldset>`, `<legend>` | Nhóm các lựa chọn liên hệ và đặt tên nhóm. |
-| `<label>` | Gắn mô tả với lựa chọn hoặc ô nhập để thao tác rõ ràng hơn. |
-| `<input type="radio">` | Cho phép chọn một nguồn thông tin và một kênh liên hệ ưu tiên. |
-| `<input type="email">`, `<input type="tel">` | Nhập email hoặc số điện thoại; `tel` không tự kiểm tra đầy đủ định dạng số Việt Nam. |
-| CSS Grid và Flexbox | Sắp xếp nhóm lựa chọn, biểu mẫu và nội dung hỗ trợ. |
-| `:has()` | Hiển thị đúng phần thông tin liên hệ theo radio đã chọn, không cần JavaScript. |
-| Media queries | Chuyển bố cục phù hợp giữa máy tính và điện thoại. |
+1. Chạy `index.html` trên trình duyệt hoặc Live Server; kiểm tra CSS được tải đúng.
+2. Quan sát danh sách sản phẩm ở desktop; thử số cột Grid và khoảng cách `gap`.
+3. Rê chuột vào Product Card và hình ảnh để kiểm tra phóng to, lớp phủ “Xem chi tiết” và chuyển động `transition`.
+4. Sử dụng phím **Tab** để kiểm tra trạng thái `focus-visible` của liên kết hình ảnh.
+5. Kiểm tra giao diện trên điện thoại hoặc Chrome DevTools ở các chiều rộng nhỏ; so sánh kích thước chữ, độ dài thẻ, tỷ lệ ảnh và tình trạng tràn nội dung.
 
-**Nội dung tôi đã tự kiểm tra và có thể giải thích:** [Sinh viên xác nhận/bổ sung sau khi đọc mã và chạy thử]
+**Điều đã xác định từ mã nguồn:** CSS có bố cục Grid, Flexbox cho Product Card, hiệu ứng hover/focus và lớp phủ ảnh. Quy tắc mobile ban đầu sử dụng hai cột ở `max-width: 480px`, chữ danh mục nhỏ, đồng thời có các khoảng cách/chiều cao tối thiểu trong thẻ.
+
+**Điều cần xác nhận trước khi nộp:** [Ghi kích thước màn hình/thiết bị đã kiểm tra], [Ảnh trước–sau], [Đã áp dụng bản sửa mobile hay chỉ thử nghiệm], [Lỗi còn tồn tại nếu có]. Không ghi “đã kiểm thử thành công” khi chưa đối chiếu trên website thực tế.
+
+## 6. Những kiến thức em có thể giải thích từ bài làm
+
+- **HTML5:** `section`, `article`, `h2`, `h3`, `p`, `img`, `a` và ý nghĩa của `alt`.
+- **CSS selector:** `.product-card`, `.products-grid > .product-card` và selector cho các phần tử bên trong.
+- **Box Model:** `margin` là khoảng cách bên ngoài; `padding` là khoảng đệm bên trong; `border` tạo đường viền.
+- **Flexbox:** `display: flex` và `flex-direction: column` tổ chức nội dung theo chiều dọc; `justify-content` căn theo trục chính, `align-items` căn theo trục phụ; `gap` tạo khoảng cách giữa các phần tử.
+- **CSS Grid:** `display: grid` tổ chức danh sách theo hàng và cột; `grid-template-columns`, `repeat()` và `gap` điều khiển bố cục.
+- **Hình ảnh:** `object-fit: cover` giữ tỷ lệ nhưng có thể cắt bớt ảnh để lấp đầy khung.
+- **Tương tác và tiếp cận:** `:hover` phản hồi khi rê chuột; `:focus-visible` thể hiện focus khi điều hướng bằng bàn phím; `transition` làm chuyển đổi mượt hơn.
+
+> **Nguyên tắc sử dụng AI:** Chỉ sử dụng gợi ý phù hợp với mã nguồn hiện có; đọc và giải thích được phần chỉnh sửa; kiểm tra lại giao diện trước khi kết luận kết quả. Các mô tả về kiểm thử và mức độ hoàn thành phải phản ánh đúng những gì đã thực hiện.
