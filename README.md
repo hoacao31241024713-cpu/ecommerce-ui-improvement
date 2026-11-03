@@ -1,53 +1,56 @@
-# E-commerce UI Improvement
+# BÀI TẬP CÁ NHÂN BUỔI 2 – HTML5 & CSS3
 
-## 1. Giới thiệu
+## 1. Giới thiệu bài tập
 
-Bài tập cá nhân cải tiến giao diện **Yêu cầu báo giá** dựa trên website **Thế Giới In Ấn**. Giao diện minh họa giúp khách hàng chủ động lựa chọn thông tin và kênh liên hệ để nhận báo giá sản phẩm in ấn.
+Bài tập Buổi 2 tiếp tục phát triển website TMĐT đã xây dựng ở Buổi 1, tập trung cải thiện cấu trúc HTML5, định dạng CSS3, bố cục và khả năng hiển thị trên các kích thước màn hình.
 
-Đây là **bản thực hành HTML5/CSS3**, không phải website chính thức và không kết nối hệ thống báo giá thực tế.
+Website được thực hành là **Thế Giới In Ấn**, thuộc lĩnh vực cung cấp sản phẩm và dịch vụ in ấn.
 
-## 2. Website tham khảo
+## 2. Website tham khảo và khu vực cải tiến
 
-- **Tên website:** Thế Giới In Ấn
-- **URL:** https://thegioiinan.com/
-- **Khu vực đã khảo sát:** Yêu cầu báo giá
+- **Website tham khảo:** [Bổ sung đường dẫn website tham khảo]
+- **Khu vực cải tiến chính:** Ấn phẩm phổ biến.
+- **Nội dung cải tiến:** Cấu trúc thông tin sản phẩm, bố cục Product Card, hình ảnh, khoảng cách, hiệu ứng tương tác và hiển thị trên điện thoại.
 
-## 3. Chức năng
+## 3. Các kỹ thuật HTML5/CSS3 đã thực hành
 
-- Hiển thị biểu mẫu yêu cầu báo giá với thông tin **danh thiếp mẫu**.
-- Chọn **sử dụng thông tin tài khoản giả lập** hoặc **thông tin liên hệ khác**.
-- Chọn kênh nhận báo giá ưu tiên: **Email, Điện thoại hoặc Zalo**.
-- Hiển thị thông tin hoặc trường nhập tương ứng bằng HTML/CSS.
-- Hỗ trợ bố cục trên màn hình máy tính và điện thoại.
-- Có nút **Gửi yêu cầu báo giá** để minh họa; **không gửi hoặc lưu dữ liệu**.
+- **HTML5:** Sử dụng `section`, `article`, `h2`, `h3`, `p`, `img`, `a` để tổ chức nội dung sản phẩm.
+- **CSS Selector:** Sử dụng class selector, descendant selector và child combinator để định dạng các phần tử.
+- **Box Model:** Thực hành `margin`, `padding`, `border`, `border-radius`.
+- **Flexbox:** Sử dụng `display: flex`, `flex-direction`, `justify-content`, `align-items`, `gap` để căn chỉnh nội dung trong Product Card.
+- **CSS Grid:** Sử dụng `display: grid`, `grid-template-columns`, `repeat()`, `gap` để bố trí danh sách sản phẩm.
+- **Hiệu ứng CSS:** Thực hành `hover`, `focus-visible`, `transition`, `transform` và lớp phủ hình ảnh.
+- **Responsive:** Sử dụng media queries để điều chỉnh bố cục và kích thước chữ trên thiết bị di động.
 
-## 4. Công nghệ
+## 4. Hướng dẫn chạy website
 
-- **HTML5:** Cấu trúc trang và biểu mẫu.
-- **CSS3:** Trình bày giao diện, lựa chọn trạng thái và bố cục responsive.
+1. Tải hoặc clone repository về máy.
+2. Mở thư mục dự án bằng Visual Studio Code.
+3. Mở file `index.html` bằng trình duyệt hoặc sử dụng tiện ích Live Server.
+4. Kiểm tra giao diện trên desktop và thiết bị di động bằng Chrome DevTools.
 
-Không sử dụng JavaScript, backend hoặc cơ sở dữ liệu.
+Website sử dụng HTML5 và CSS3, không yêu cầu cài đặt framework để xem giao diện cơ bản.
 
-## 5. Cách chạy
+## 5. Những thay đổi đã thực hiện
 
-1. Đặt `index.html` và `style.css` trong cùng một thư mục.
-2. Mở file `index.html` bằng trình duyệt (ví dụ Chrome hoặc Edge).
-3. Thử chọn nguồn thông tin liên hệ và kênh Email/Điện thoại/Zalo để xem các trường hiển thị.
-4. Thay đổi kích thước cửa sổ hoặc dùng công cụ kiểm tra chế độ điện thoại của trình duyệt để xem bố cục responsive.
+- Tổ chức lại thông tin danh mục và giá thành các đoạn HTML riêng.
+- Bổ sung đường viền, khoảng đệm và bo góc cho Product Card.
+- Thực hành Flexbox để căn chỉnh nội dung trong từng thẻ sản phẩm.
+- Kiểm tra và thử nghiệm CSS Grid với số cột khác nhau.
+- Bổ sung hiệu ứng phóng to thẻ, lớp phủ “Xem chi tiết” trên ảnh, hover và focus-visible.
+- Đề xuất điều chỉnh kích thước chữ, khoảng cách và tỷ lệ ảnh để cải thiện giao diện trên điện thoại.
 
-## 6. Cải tiến đã thực hiện
+## 6. Công cụ AI và phương pháp kiểm tra
 
-**Vấn đề khảo sát ban đầu:** Theo ghi nhận của người thực hiện, khu vực Yêu cầu báo giá sử dụng thông tin liên hệ từ tài khoản đăng nhập và chưa có lựa chọn rõ ràng để nhập thông tin liên hệ khác hoặc chọn kênh nhận báo giá.
+**Công cụ AI sử dụng:** ChatGPT (OpenAI).
 
-**Phương án giao diện đã xây dựng:** Bổ sung mục **Phương thức liên hệ nhận báo giá**, cho phép chọn thông tin tài khoản giả lập hoặc nhập thông tin khác, đồng thời chọn **Email, Điện thoại hoặc Zalo** làm kênh ưu tiên. Các trường được hiển thị tương ứng bằng CSS.
+Em sử dụng AI để hỗ trợ phân tích mã HTML/CSS hiện có, giải thích các thuộc tính, đề xuất những thay đổi nhỏ và xác định các vấn đề giao diện.
 
-**Giới hạn:** Trang chỉ mô phỏng giao diện; không đăng nhập, kiểm tra dữ liệu đầy đủ, gửi yêu cầu hay nhận báo giá thật.
+Các đề xuất được xem xét dựa trên cấu trúc mã nguồn hiện tại. Em sử dụng Visual Studio Code, trình duyệt và Chrome DevTools để quan sát kết quả, so sánh các phương án và điều chỉnh những giải pháp chưa phù hợp.
 
-## 7. Hỗ trợ từ AI
+Ví dụ, em đã điều chỉnh đề xuất ban đầu về nhãn “Xem chi tiết”, từ vị trí cuối Product Card sang lớp phủ xuất hiện trên hình ảnh khi hover hoặc focus.
 
-- **Công cụ:** ChatGPT.
-- **AI đã hỗ trợ:** Phân tích khu vực Yêu cầu báo giá, đề xuất bố cục UI/UX, gợi ý các thành phần HTML/CSS và hỗ trợ tạo mã nguồn `index.html`, `style.css`.
-- **Phần người thực hiện tự điều chỉnh hoặc bổ sung:** Ban đầu giao diện còn đen trắng, dạng biểu mãu, chưa có cấu trúc bộ nhận diện của website gốc. Điều chỉnh lại phần giao diện biểu mẫu tinh gọn hơn, và thêm các thành phần giống bộ nhận diện của website gốc
+## 7. Repository và website triển khai
 
-Chi tiết việc sử dụng AI được ghi trong file [`AI_USAGE.md`](AI_USAGE.md)
-
+- **GitHub Repository:** https://github.com/hoacao31241024713-cpu/ecommerce-ui-improvement
+- **Website demo:** [Bổ sung URL nếu đã triển khai]
