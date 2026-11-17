@@ -1,0 +1,12 @@
+/* Lightweight offline fallback for source Bootstrap 3 classes. Original Lab CSS preserved. */
+:where(.container){max-width:1140px;margin:0 auto;padding:0 15px}
+:where(.row)::after{content:"";display:table;clear:both}
+:where(.col-md-4){box-sizing:border-box;padding:12px}
+:where(.col-md-3){box-sizing:border-box;padding:10px}
+:where(.img-responsive){display:block;max-width:100%;height:auto}
+:where(.btn){border:1px solid transparent;border-radius:4px;padding:7px 12px;cursor:pointer}
+:where(.btn-primary){background:#337ab7;color:#fff}
+:where(.list-unstyled){padding-left:0;list-style:none}
+:where(.form-control){display:block;width:100%;border:1px solid #ccc;border-radius:4px;padding:6px 12px;box-sizing:border-box}
+@media(min-width:768px){.col-md-4{width:33.3333%;float:left}.col-md-3{width:25%;float:left}}
+@media(max-width:767px){.col-md-4,.col-md-3{width:100%;float:none}}
