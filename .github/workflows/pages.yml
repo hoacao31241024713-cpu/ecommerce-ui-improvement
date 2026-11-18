@@ -1,10 +1,11 @@
-name: Deploy JavaScript-Labs to GitHub Pages
+name: Deploy static sites to GitHub Pages
 
 on:
   push:
     branches:
       - main
     paths:
+      - "FE_NANG_CAO/**"
       - "JavaScript-Labs/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
@@ -34,7 +35,10 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Prepare site
-        run: mkdir -p _site && cp -R JavaScript-Labs _site/
+        run: |
+          mkdir -p _site
+          cp -R FE_NANG_CAO _site/
+          cp -R JavaScript-Labs _site/
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
