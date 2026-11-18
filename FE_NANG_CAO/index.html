@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng kết bài học Front-End</title>
+    <style>
+        :root {
+            --navy: #0b1f3a;
+            --blue: #2f80ed;
+            --light-blue: #edf5ff;
+            --text: #24324a;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: linear-gradient(135deg, #eef5ff 0%, #d9eaff 100%);
+        }
+
+        .container {
+            width: min(920px, calc(100% - 32px));
+            margin: 32px auto;
+            overflow: hidden;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 14px 40px rgba(11, 31, 58, 0.12);
+        }
+
+        header {
+            padding: 36px 44px;
+            color: var(--white);
+            background: var(--navy);
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: clamp(28px, 5vw, 42px);
+        }
+
+        header p {
+            margin: 0;
+            opacity: 0.85;
+        }
+
+        main {
+            padding: 36px 44px 44px;
+        }
+
+        .profile {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            margin-bottom: 28px;
+            padding: 18px 20px;
+            background: var(--light-blue);
+            border-left: 5px solid var(--blue);
+            border-radius: 10px;
+        }
+
+        .profile strong {
+            color: var(--navy);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: var(--navy);
+        }
+
+        .lesson-content {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .lesson-content p {
+            margin: 0 0 16px;
+        }
+
+        .highlight {
+            color: var(--navy);
+            font-weight: bold;
+        }
+
+        .action {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 13px 22px;
+            color: var(--white);
+            background: var(--blue);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+
+        .action:hover {
+            transform: translateY(-2px);
+            background: #1f6fd1;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: calc(100% - 20px);
+                margin: 10px auto;
+            }
+
+            header,
+            main {
+                padding: 24px 20px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+
+            .action {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Tổng kết bài học hôm nay</h1>
+            <p>Thực hành Front-End cơ bản và thiết kế web đáp ứng</p>
+        </header>
+
+        <main>
+            <section class="profile" aria-label="Thông tin sinh viên">
+                <div><strong>Sinh viên:</strong> Cao Thị Tuyết Hoa</div>
+                <div><strong>MSSV:</strong> 31241024713</div>
+            </section>
+
+            <section class="lesson-content">
+                <h2>Những kiến thức đã học</h2>
+
+                <p>
+                    Đầu tiên, em tìm hiểu cách tương tác với trò chơi khủng long ẩn trên Chrome thông qua
+                    <span class="highlight">chrome://dino</span>, trong đó có thể điều chỉnh tốc độ chạy và độ
+                    cao nhảy để quan sát cách thay đổi thông số ảnh hưởng đến trải nghiệm trò chơi.
+                </p>
+
+                <p>
+                    Tiếp theo, em làm quen với <span class="highlight">thiết kế web đáp ứng</span> bằng CSS
+                    Media Queries (<code>@media</code>). Em đã biết cách tự động chuyển bố cục hai cột 70/30
+                    thành bố cục xếp dọc 100% trên màn hình nhỏ, đồng thời ẩn hoặc hiển thị các khối
+                    <code>.left</code>, <code>.right</code> tùy theo kích thước thiết bị và chế độ in.
+                </p>
+
+                <p>
+                    Ngoài ra, em thực hành thẻ <code>&lt;picture&gt;</code> kết hợp với các thẻ
+                    <code>&lt;source&gt;</code> để trình duyệt tự động lựa chọn và hiển thị phiên bản logo UEH
+                    phù hợp nhất với kích thước khung nhìn. Qua bài học, em đã hiểu cách kết hợp HTML và CSS
+                    để trang web linh hoạt hơn trên nhiều loại màn hình.
+                </p>
+
+                <a class="action" href="Bai1.html">Xem bài thực hành Responsive &rarr;</a>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
