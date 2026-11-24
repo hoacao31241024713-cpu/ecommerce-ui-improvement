@@ -1,0 +1,23 @@
+figure {
+  margin: 2em;
+  padding: 1em;
+  background: #FFCC80;
+  width: 200px;
+  /* transform: rotate(15deg); */
+}
+
+/* figure {
+transform: rotate(45deg);
+} */
+
+/* figure {
+transform: skew(-20deg);
+}
+
+figure img {
+transform: translatex(100px) translatey(-30px);
+} */
+
+figure img {
+  transform: rotate(45deg) scale(0.5);
+}

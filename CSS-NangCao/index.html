@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trang tổng quan bài tập cá nhân Lab 07 Advanced CSS của Cao Thị Tuyết Hoa, gồm 19 bài thực hành CSS và Bootstrap.">
+  <title>Lab 07 - Advanced CSS | Cao Thị Tuyết Hoa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Bỏ qua điều hướng</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a class="name" href="#top">Cao Thị Tuyết Hoa</a>
+        <ul>
+          <li><a href="#about">Thông tin</a></li>
+          <li><a href="#exercises">Bài thực hành</a></li>
+          <li><a href="#reflection">Tổng kết</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="main-content">
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <div class="intro">
+        <p class="course">Bài tập cá nhân - Buổi 5 - Lab 07</p>
+        <h1 id="page-title">Advanced<br>CSS</h1>
+        <p class="subtitle">Layout, responsive design và hiệu ứng giao diện</p>
+        <p>
+          Bộ sưu tập 19 bài thực hành từ quy tắc bố cục CSS, định vị và float
+          đến thiết kế responsive, hiệu ứng chuyển động và hệ thống lưới Bootstrap.
+          Chọn một bài bên dưới để xem kết quả thực hành.
+        </p>
+        <a class="button" href="#exercises">Xem các bài thực hành <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <aside class="profile" id="about" aria-labelledby="profile-title">
+        <img src="images/anh-ca-nhan.jpg" alt="Ảnh chân dung Cao Thị Tuyết Hoa">
+        <div class="profile-info">
+          <h2 id="profile-title">Thông tin sinh viên</h2>
+          <dl>
+            <div>
+              <dt>Họ và tên</dt>
+              <dd>Cao Thị Tuyết Hoa</dd>
+            </div>
+            <div>
+              <dt>MSSV</dt>
+              <dd>31241024713</dd>
+            </div>
+            <div>
+              <dt>Lớp học phần</dt>
+              <dd>26C1INF50902702</dd>
+            </div>
+            <div>
+              <dt>Nội dung</dt>
+              <dd>Lab 07 - Advanced CSS: Layout</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+    </section>
+
+    <section class="exercises" id="exercises" aria-labelledby="exercises-title">
+      <p class="course">19 bài thực hành</p>
+      <h2 id="exercises-title">Bài thực hành và kỹ năng</h2>
+      <p class="note">Các liên kết mở trực tiếp trang HTML của từng bài. Bài 7.12 và 7.13 dùng chung trang Exercise 12 trong thư mục hiện có.</p>
+
+      <div class="topics">
+        <article class="topic">
+          <h3>Nền tảng và định vị</h3>
+          <p>Luồng tài liệu, vị trí phần tử và thứ tự xếp lớp.</p>
+          <ul>
+            <li><a href="Lab07/Exercise01/lab07-exercise01.html"><span>7.1</span>Document Flow</a></li>
+            <li><a href="Lab07/Exercise02/lab07-exercise02.html"><span>7.2</span>Relative Positioning</a></li>
+            <li><a href="Lab07/Exercise03/lab07-exercise03.html"><span>7.3</span>Absolute Positioning</a></li>
+            <li><a href="Lab07/Exercise04/lab07-exercise04.html"><span>7.4</span>Stacking Using Z-Index</a></li>
+          </ul>
+        </article>
+
+        <article class="topic">
+          <h3>Float và bố cục trang</h3>
+          <p>Sắp xếp ảnh, nội dung, các cột và lớp phủ.</p>
+          <ul>
+            <li><a href="Lab07/Exercise05/lab07-exercise05.html"><span>7.5</span>Floating Elements</a></li>
+            <li><a href="Lab07/Exercise06/lab07-exercise06.html"><span>7.6</span>Floating in a Container</a></li>
+            <li><a href="Lab07/Exercise07/lab07-exercise07.html"><span>7.7</span>Floating Multiple Items</a></li>
+            <li><a href="Lab07/Exercise08/lab07-exercise08.html"><span>7.8</span>Floating and Clearing</a></li>
+            <li><a href="Lab07/Exercise9/lab07-exercise09.html"><span>7.9</span>Using Positioning</a></li>
+            <li><a href="Lab07/Exercise10/lab07-exercise10.html"><span>7.10</span>Two-Column Layout</a></li>
+            <li><a href="Lab07/Exercise11/lab07-exercise11.html"><span>7.11</span>Three-Column Layout</a></li>
+          </ul>
+        </article>
+
+        <article class="topic">
+          <h3>Thiết kế responsive</h3>
+          <p>Điều chỉnh bố cục và điều hướng theo kích thước màn hình.</p>
+          <ul>
+            <li><a href="Lab07/Exercise12/lab07-exercise12.html"><span>7.12</span>Media Queries</a></li>
+            <li><a href="Lab07/Exercise12/lab07-exercise12.html"><span>7.13</span>Setting the Viewport</a></li>
+          </ul>
+        </article>
+
+        <article class="topic">
+          <h3>Biến đổi và hiệu ứng</h3>
+          <p>Thực hành transform, transition, filter và animation.</p>
+          <ul>
+            <li><a href="Lab07/Exercise14/lab07-exercise14.html"><span>7.14</span>Transforms</a></li>
+            <li><a href="Lab07/Exercise15/lab07-exercise15.html"><span>7.15</span>Transitions</a></li>
+            <li><a href="Lab07/Exercise16/lab07-exercise16.html"><span>7.16</span>More Transitions</a></li>
+            <li><a href="Lab07/Exercise17/lab07-exercise17.html"><span>7.17</span>Filters</a></li>
+            <li><a href="Lab07/Exercise18/lab07-exercise18.html"><span>7.18</span>Animations</a></li>
+          </ul>
+        </article>
+
+        <article class="topic">
+          <h3>Bootstrap</h3>
+          <p>Lưới 12 cột, bố cục responsive và các cột lồng nhau.</p>
+          <ul>
+            <li><a href="Lab07/Exercise19/lab07-exercise19.html"><span>7.19</span>Using Bootstrap</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="reflection" id="reflection" aria-labelledby="reflection-title">
+      <h2 id="reflection-title">Tổng kết</h2>
+      <p>
+        Qua Lab 07, em rèn luyện cách quan sát tác động của từng quy tắc CSS lên
+        toàn bộ bố cục, đồng thời thực hành xây dựng giao diện thích ứng với nhiều
+        kích thước màn hình. Float, clear và responsive layout giúp em hiểu rõ hơn
+        cách tổ chức nội dung; transitions và animations nhắc em chỉ nên dùng hiệu
+        ứng khi chúng hỗ trợ trải nghiệm. Những kiến thức này có thể vận dụng để
+        xây dựng trang thương mại điện tử dễ sử dụng trên cả máy tính và điện thoại.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Lab 07 - Advanced CSS - Cao Thị Tuyết Hoa - MSSV 31241024713</p>
+    </div>
+  </footer>
+</body>
+</html>
