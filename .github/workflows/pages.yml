@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - "CSS-NangCao/**"
       - "FE_NANG_CAO/**"
       - "JavaScript-Labs/**"
       - ".github/workflows/pages.yml"
@@ -28,23 +29,16 @@ jobs:
       id-token: write
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
       - name: Prepare site
         run: |
           mkdir -p _site
+          cp -R CSS-NangCao _site/
           cp -R FE_NANG_CAO _site/
           cp -R JavaScript-Labs _site/
-
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-
-      - name: Deploy
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
