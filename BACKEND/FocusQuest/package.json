@@ -1,0 +1,19 @@
+{
+  "name": "focusquest",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.13"},
+  "scripts": {
+    "start": "node 04-Fullstack/server/server.js",
+    "dev": "node --watch 04-Fullstack/server/server.js",
+    "test": "node --test 04-Fullstack/tests/*.test.js",
+    "db:init": "node 04-Fullstack/server/database.js",
+    "db:seed": "node 04-Fullstack/server/database.js",
+    "db:reset": "node 04-Fullstack/server/database.js --reset",
+    "gui": "node tools/static.js 01-GUI 3001",
+    "mock": "node tools/static.js 02-No-Database 3002",
+    "build:static": "node tools/build-static.js"
+  },
+  "dependencies": {"chart.js": "^4.5.1", "express": "^5.2.1"}
+}
