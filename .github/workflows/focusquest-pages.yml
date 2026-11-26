@@ -1,0 +1,56 @@
+name: Publish FocusQuest Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/configure-pages@v5
+
+      - name: Prepare and check the site
+        shell: bash
+        run: |
+          mkdir _pages
+          git archive HEAD | tar -xf - -C _pages
+          test -s _pages/BACKEND/index.html
+          app=_pages/BACKEND/FocusQuest/02-No-Database
+          test -s "$app/index.html"
+          test -s "$app/styles/app.css"
+          test -s "$app/scripts/app.js"
+          test -s "$app/assets/chart.min.js"
+          grep -q 'data-mode="mock"' "$app/index.html"
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _pages
+
+      - uses: actions/deploy-pages@v4
+        id: publish
+
+      - name: Verify the public TODO page
+        env:
+          PAGES_URL: ${{ steps.publish.outputs.page_url }}
+        shell: bash
+        run: |
+          url="${PAGES_URL%/}/BACKEND/"
+          curl --fail --silent --show-error --location --retry 5 --retry-all-errors --max-time 15 "$url" -o "$RUNNER_TEMP/landing.html"
+          grep -q './FocusQuest/02-No-Database/' "$RUNNER_TEMP/landing.html"
+          curl --fail --silent --show-error --location --retry 5 --retry-all-errors --max-time 15 "${url}FocusQuest/02-No-Database/" -o "$RUNNER_TEMP/focusquest.html"
+          grep -q 'data-mode="mock"' "$RUNNER_TEMP/focusquest.html"
